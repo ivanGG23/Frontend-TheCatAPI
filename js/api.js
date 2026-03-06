@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:4000/cats';
+const BASE_URL = CONFIG.API_BASE_URL;
 
 const getGatosRandom = async (limit = 10) => {
     const response = await fetch(`${BASE_URL}/random?limit=${limit}`);
