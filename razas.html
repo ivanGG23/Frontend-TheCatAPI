@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatApp - Razas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+
+    <nav class="bg-white shadow-md px-6 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-orange-500">CatApp</h1>
+        <div class="flex gap-4">
+            <a href="index.html" class="text-gray-600 hover:text-orange-500 transition">Random</a>
+            <a href="razas.html" class="text-orange-500 font-semibold border-b-2 border-orange-500">Razas</a>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="flex gap-4 items-center mb-8">
+            <select id="razaSelect" class="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-400 flex-1 max-w-xs">
+                <option value="">Cargando razas...</option>
+            </select>
+            <button id="btnBuscar" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-lg transition">
+                Buscar
+            </button>
+        </div>
+
+        <div id="infoRaza" class="hidden bg-white rounded-xl p-6 shadow mb-6">
+            <h2 id="nombreRaza" class="text-xl font-bold text-gray-800 mb-1"></h2>
+            <p id="origenRaza" class="text-sm text-gray-500 mb-2"></p>
+            <p id="descRaza" class="text-gray-600 text-sm"></p>
+        </div>
+
+        <p id="mensaje" class="text-center text-gray-500 mb-4 hidden"></p>
+
+        <div id="gatoGrid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/razas.js"></script>
+</body>
+</html>
